@@ -9,6 +9,8 @@ int main(int argc, char** argv) {
 
 	while (Platform::tick()) {
 
+		Renderer::clear(0x000000ff);
+		Renderer::present();
 	}
 
 	Renderer::release();
