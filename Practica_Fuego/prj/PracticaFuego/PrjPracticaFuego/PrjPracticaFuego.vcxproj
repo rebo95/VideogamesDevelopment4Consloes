@@ -154,11 +154,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\src\Fire.cpp" />
     <ClCompile Include="..\..\..\src\main.cpp" />
     <ClCompile Include="..\..\..\src\PC\PlatformPC.cpp" />
     <ClCompile Include="..\..\..\src\PC\RendererPC.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\src\Fire.h" />
     <ClInclude Include="..\..\..\src\PC\PlatformPC.h" />
     <ClInclude Include="..\..\..\src\PC\RendererPC.h" />
     <ClInclude Include="..\..\..\src\Platform.h" />

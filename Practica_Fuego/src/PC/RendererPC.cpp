@@ -21,6 +21,14 @@ void Renderer::clear(uint32_t color)
 	SDL_RenderClear(renderer_);
 }
 
+void Renderer::putPixel(int x, int y, uint32_t color)
+{
+	uint8_t*c = serializeColor(color);
+	SDL_SetRenderDrawColor(renderer_, c[1], c[2], c[3], c[0]);	//RGBA, recordar aquí que nosotros 
+																//hemos estado almacenando el color como ARGB
+	SDL_RenderDrawPoint(renderer_, x, y);
+}
+
 void Renderer::present()
 {
 	SDL_RenderPresent(renderer_);
@@ -30,12 +38,14 @@ int Renderer::getWidth()
 {
 	int w;
 	SDL_GetWindowSize(Platform::getWindow(), &w, NULL);
+	return w;
 }
 
 int Renderer::getHeight()
 {
 	int h;
 	SDL_GetWindowSize(Platform::getWindow(), NULL, &h);
+	return h;
 }
 
 int Renderer::getNumBuffers()
@@ -56,4 +66,21 @@ uint8_t * Renderer::serializeColor(uint32_t color)
 	serializedResult[3] = (color & 0x000000ff);
 
 	return serializedResult;
+}
+
+uint32_t Renderer::deserializeColor(uint8_t r, uint8_t g, uint8_t b)
+{
+	uint32_t deserializedColor = 0;
+	deserializedColor += 0xff;
+	deserializedColor <<= 8;
+
+	deserializedColor += r;
+	deserializedColor <<= 8;
+
+	deserializedColor += g;
+	deserializedColor <<= 8;
+
+	deserializedColor += b;
+
+	return deserializedColor;
 }

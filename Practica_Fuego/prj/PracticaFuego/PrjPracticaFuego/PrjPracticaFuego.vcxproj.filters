@@ -30,6 +30,9 @@
     <ClCompile Include="..\..\..\src\PC\PlatformPC.cpp">
       <Filter>Archivos de origen\PC</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\src\Fire.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\Platform.h">
@@ -43,6 +46,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\src\PC\PlatformPC.h">
       <Filter>Archivos de encabezado\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\Fire.h">
+      <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
