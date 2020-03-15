@@ -20,7 +20,7 @@ private :
 	static const int FIRE_WIDTH = 500;		//Ancho de la llamarada
 
 	//atendiendo a la teoría de que cargamos los buffers y plasmamos en pantalla los mismos
-	uint32_t firePixelsBuffer[FIRE_WIDTH][FIRE_HEIGHT];
+	int firePixelsBuffer[FIRE_HEIGHT][FIRE_WIDTH];
 
 	static const int NUMBER_OF_COLORS = 38;
 	static const uint32_t paletaFuego[NUMBER_OF_COLORS];
@@ -46,6 +46,6 @@ public:
 	void render();
 
 private:
-	uint32_t updatePixel(uint32_t currentColor);
-	void turnOnOffFire();
+	int updatePixel(int i, int j);
+	void turnOnOffFire(SimulationState state, int j);
 };

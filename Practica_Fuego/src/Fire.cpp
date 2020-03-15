@@ -55,7 +55,7 @@ Fire::Fire()
 
 	for (int i = 0; i < Fire::FIRE_HEIGHT; i++) {
 		for (int j = 0; j < Fire::FIRE_WIDTH; j++) {
-			firePixelsBuffer[i][j] = paletaFuego[0];
+			firePixelsBuffer[i][j] = 0;
 		}
 	}
 }
@@ -65,11 +65,12 @@ Fire::~Fire()
 }
 
 //Actualiza el valor de todos los pixeles de la llamarada
-void Fire::update(SimulationState State)
+void Fire::update(SimulationState state)
 {
 	for (int i = 0; i < Fire::FIRE_HEIGHT; i++) {
 		for (int j = 0; j < Fire::FIRE_WIDTH; j++) {
-			firePixelsBuffer[i][j] = updatePixel(firePixelsBuffer[i][j]);
+			if (i == FIRE_HEIGHT - 1)turnOnOffFire(state, j);
+			else firePixelsBuffer[i][j] = updatePixel(i, j);
 		}
 	}
 }
@@ -88,22 +89,73 @@ void Fire::render()
 			posX = posX_ + j;
 			posY = posY_ + i;
 
-			Renderer::putPixel(posX, posY, firePixelsBuffer[i][j]);
+			Renderer::putPixel(posX, posY, paletaFuego[firePixelsBuffer[i][j]]);
 		}
 	}
 }
 
 //Modifica el valor del pixel que va a ser pintado
-uint32_t Fire::updatePixel(uint32_t currentColor)
+int Fire::updatePixel(int i, int j)
 {
-	uint32_t newColor = 0;
+	int rnd;
+	int i_pixel_of_reference = i + 1;
+	int j_pixel_of_reference = j;
 
 	//lógica de actualización del color del pixel que se va a modificar
 
-	return newColor;
+	//Si nos encontramos en la parte izda del rectángulo que conforma la llamarada
+	if (j == 0) {
+		rnd = rand() % 2;
+		if (rnd == 0) j_pixel_of_reference++;
+	}
+	else if (j == FIRE_WIDTH - 1) { //Si nos encontramos en la parte izda del rectángulo que conforma la llamarada
+		rnd = rand() % 2;
+		if (rnd == 0) j_pixel_of_reference--;
+	}
+	else {
+		rnd = rand() % 3;
+		if (rnd == 0) {
+			j_pixel_of_reference--;	//miramos el pixel a la izda del que estamos pasando como entrada
+		}
+		else if (rnd == 1) {
+			j_pixel_of_reference++;	//miramos el pixel a la izda del que estamos pasando como entrada
+		}
+	}
+
+	int newPixelColor = firePixelsBuffer[i_pixel_of_reference][j_pixel_of_reference];
+
+	//Lógica de enfriamiento, el pixel seleccionado toma el color del que tiene debajo o lo disminuye en uno
+	rnd = rand() % 2;
+	if (rnd == 0 && newPixelColor > 0) {//nótese que si el pixel de referencia está a negro no hay ningún color más frío
+		newPixelColor = firePixelsBuffer[i_pixel_of_reference][j_pixel_of_reference] - 1;
+	}
+
+	//en cualquier otro caso el color se mantiene igual al de el pixel correspondiete 
+	//(izq,der ó centr)de referencia que está debajo
+
+	return newPixelColor;
 }
 
 //Enciende o apaga la simulación de la llamarada
-void Fire::turnOnOffFire()
+void Fire::turnOnOffFire(SimulationState state, int j)
 {
+	int rnd = 0;
+	switch (state)
+	{
+
+	case Fire::LIT:
+		rnd = rand() % 2;
+		if (rnd == 0) {
+			firePixelsBuffer[FIRE_HEIGHT - 1][j] = NUMBER_OF_COLORS - 1;
+		}
+		break;
+	case Fire::UNLIT:
+		rnd = rand() % 2;
+		if (rnd == 0) {
+			firePixelsBuffer[FIRE_HEIGHT - 1][j] = 0;
+		}
+		break;
+	default:
+		break;
+	}
 }

@@ -6,19 +6,29 @@ int main(int argc, char** argv) {
 	Platform::init();
 	Renderer::init();
 
+	int fireFrameCounter = 0;
+
+	const int NUM_FRAMES_FADE = 150;
+	const int NUM_FRAMES_FLAME = 200;
+
 	Fire fire;
 
 	while (Platform::tick()) {
 
-		Renderer::clear(0x00ff0000);
+		Renderer::clear(0x00000000);
 
-		for (int i = 0; i < 1080; i++) {
-			for (int j = 200; j < 500; j++) {
-				Renderer::putPixel(i, j, 0x00ffff00);
-			}
-		}
+
+
+		if(fireFrameCounter > NUM_FRAMES_FADE + NUM_FRAMES_FLAME)
+			fire.update(Fire::UNLIT);
+		else if(fireFrameCounter > NUM_FRAMES_FADE)
+			fire.update(Fire::DEFAULT);
+		else fire.update(Fire::LIT);
 
 		fire.render();
+
+		fireFrameCounter++;
+		if (fireFrameCounter > NUM_FRAMES_FADE + NUM_FRAMES_FLAME + NUM_FRAMES_FADE) fireFrameCounter = 0;
 
 		Renderer::present();
 	}
