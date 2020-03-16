@@ -1,5 +1,6 @@
 
 #include "Fire.h"
+#include "Sphere.h"
 
 int main(int argc, char** argv) {
 
@@ -12,6 +13,8 @@ int main(int argc, char** argv) {
 	const int NUM_FRAMES_FLAME = 200;
 
 	Fire fire;
+	Sphere sphere;
+
 
 	while (Platform::tick()) {
 
@@ -29,6 +32,9 @@ int main(int argc, char** argv) {
 
 		fireFrameCounter++;
 		if (fireFrameCounter > NUM_FRAMES_FADE + NUM_FRAMES_FLAME + NUM_FRAMES_FADE) fireFrameCounter = 0;
+
+		sphere.sphereMovement();
+		sphere.renderCircle();
 
 		Renderer::present();
 	}

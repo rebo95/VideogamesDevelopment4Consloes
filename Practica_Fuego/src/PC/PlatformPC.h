@@ -12,9 +12,9 @@
 class Platform {
 private :
 	static SDL_Window* window_;				//Mnejador de la ventana de SDL
-	static const int WINDOW_WIDHT = 1080;	//Ancho de la ventana
-	static const int WINDOW_HEIGHT = 720;	//Alto de la ventana
-	static const bool FULLSCREEN = 1;		//Opción pantalla completa No(0) - Si(1)
+	static const int WINDOW_WIDHT = 1000;	//Ancho de la ventana
+	static const int WINDOW_HEIGHT = 500;	//Alto de la ventana
+	static const bool FULLSCREEN = 0;		//Opción pantalla completa No(0) - Si(1)
 
 public :
 
