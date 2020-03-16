@@ -36,6 +36,9 @@
     <ClCompile Include="..\..\..\src\Sphere.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\src\WhiteBars.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\Platform.h">
@@ -54,6 +57,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\src\Sphere.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\WhiteBars.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

@@ -159,6 +159,7 @@
     <ClCompile Include="..\..\..\src\PC\PlatformPC.cpp" />
     <ClCompile Include="..\..\..\src\PC\RendererPC.cpp" />
     <ClCompile Include="..\..\..\src\Sphere.cpp" />
+    <ClCompile Include="..\..\..\src\WhiteBars.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\Fire.h" />
@@ -167,6 +168,7 @@
     <ClInclude Include="..\..\..\src\Platform.h" />
     <ClInclude Include="..\..\..\src\Renderer.h" />
     <ClInclude Include="..\..\..\src\Sphere.h" />
+    <ClInclude Include="..\..\..\src\WhiteBars.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

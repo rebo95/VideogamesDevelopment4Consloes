@@ -1,6 +1,8 @@
 
 #include "Fire.h"
 #include "Sphere.h"
+#include "WhiteBars.h"
+
 
 int main(int argc, char** argv) {
 
@@ -14,6 +16,7 @@ int main(int argc, char** argv) {
 
 	Fire fire;
 	Sphere sphere;
+	WhiteBars whiteBars;
 
 
 	while (Platform::tick()) {
@@ -35,6 +38,9 @@ int main(int argc, char** argv) {
 
 		sphere.sphereMovement();
 		sphere.renderCircle();
+
+		whiteBars.update();
+		whiteBars.render();
 
 		Renderer::present();
 	}
