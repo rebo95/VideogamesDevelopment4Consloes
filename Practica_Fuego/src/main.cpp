@@ -10,6 +10,7 @@ int main(int argc, char** argv) {
 	Renderer::init();
 
 	int fireFrameCounter = 0;
+	int frames = 0;
 
 	const int NUM_FRAMES_FADE = 150;
 	const int NUM_FRAMES_FLAME = 200;
@@ -18,12 +19,9 @@ int main(int argc, char** argv) {
 	Sphere sphere;
 	WhiteBars whiteBars;
 
+	int num_frame_buffers = Renderer::getNumBuffers();
 
 	while (Platform::tick()) {
-
-		Renderer::clear(0x00000000);
-
-
 
 		if(fireFrameCounter > NUM_FRAMES_FADE + NUM_FRAMES_FLAME)
 			fire.update(Fire::UNLIT);
@@ -36,12 +34,19 @@ int main(int argc, char** argv) {
 		fireFrameCounter++;
 		if (fireFrameCounter > NUM_FRAMES_FADE + NUM_FRAMES_FLAME + NUM_FRAMES_FADE) fireFrameCounter = 0;
 
-		sphere.sphereMovement();
-		sphere.renderCircle();
-
 		whiteBars.update();
-		whiteBars.render();
+		if (frames < num_frame_buffers) {
+			Renderer::clear(0x00000000);
+			whiteBars.render();
+		}
+		else
+			whiteBars.render(num_frame_buffers);
 
+
+		//sphere.sphereMovement();
+		//sphere.renderCircle();
+
+		frames++;
 		Renderer::present();
 	}
 
