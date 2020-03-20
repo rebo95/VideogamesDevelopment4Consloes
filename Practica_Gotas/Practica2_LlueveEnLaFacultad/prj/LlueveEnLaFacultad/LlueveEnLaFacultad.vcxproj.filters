@@ -13,10 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Archivos de encabezado\PC">
+      <UniqueIdentifier>{81936ce1-d2fe-4d80-991b-509fd35acaaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\PS4">
+      <UniqueIdentifier>{e8d486c1-daa0-4131-b820-114e3fb9bad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\PS4">
+      <UniqueIdentifier>{6190db54-6810-459b-9b30-58821a87bc50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\PC">
+      <UniqueIdentifier>{b62ba136-428c-48e7-be33-7ce023cd2595}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\PC\RendererPC.cpp">
+      <Filter>Archivos de origen\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PC\PlatformPC.cpp">
+      <Filter>Archivos de origen\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Queue.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Renderer.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Platform.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PC\RendererPC.h">
+      <Filter>Archivos de encabezado\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PC\PlatformPC.h">
+      <Filter>Archivos de encabezado\PC</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

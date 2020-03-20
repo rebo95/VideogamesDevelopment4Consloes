@@ -21,32 +21,26 @@ int main(int argc, char** argv) {
 
 	int num_frame_buffers = Renderer::getNumBuffers();
 
+
 	while (Platform::tick()) {
+		Renderer::clear(0x00000000);
+		////for (int i = 0; i < WINDOW_WIDTH * WINDOW_HEIGHT; i++) {
 
-		if(fireFrameCounter > NUM_FRAMES_FADE + NUM_FRAMES_FLAME)
-			fire.update(Fire::UNLIT);
-		else if(fireFrameCounter > NUM_FRAMES_FADE)
-			fire.update(Fire::DEFAULT);
-		else fire.update(Fire::LIT);
+		////	int a = i % dim;
+		////	int b = i / dim;
+		////	uint32_t c = picture_[i];
 
-		fire.render();
+		////	Renderer::putPixel(a, b, 0x00ff0000);
+		////}
 
-		fireFrameCounter++;
-		if (fireFrameCounter > NUM_FRAMES_FADE + NUM_FRAMES_FLAME + NUM_FRAMES_FADE) fireFrameCounter = 0;
+		for (int i = 0; i < 200; i++) {
+			for (int j = 0; j < 200; i++) {
 
-		whiteBars.update();
-		if (frames < num_frame_buffers) {
-			Renderer::clear(0x00000000);
-			whiteBars.render();
+				//uint32_t c = picture_[i];
+
+				Renderer::putPixel(i, j, 0x000000ff);
+			}
 		}
-		else
-			whiteBars.render(num_frame_buffers);
-
-
-		//sphere.sphereMovement();
-		//sphere.renderCircle();
-
-		frames++;
 		Renderer::present();
 	}
 
