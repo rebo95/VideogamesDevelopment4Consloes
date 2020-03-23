@@ -67,8 +67,8 @@ Fire::~Fire()
 //Actualiza el valor de todos los pixeles de la llamarada
 void Fire::update(SimulationState state)
 {
-	for (int i = 0; i < Fire::FIRE_HEIGHT; i++) {
-		for (int j = 0; j < Fire::FIRE_WIDTH; j++) {
+	for (int i = Fire::FIRE_HEIGHT -1; i >= 0; i--) {
+		for (int j = Fire::FIRE_WIDTH - 1; j >= 0; j--) {
 			if (i == FIRE_HEIGHT - 1)turnOnOffFire(state, j);
 			else firePixelsBuffer[i][j] = updatePixel(i, j);
 		}
@@ -86,6 +86,7 @@ void Fire::render()
 
 	for (int i = 0; i < Fire::FIRE_HEIGHT; i++) {
 		for (int j = 0; j < Fire::FIRE_WIDTH; j++) {
+
 			posX = posX_ + j;
 			posY = posY_ + i;
 

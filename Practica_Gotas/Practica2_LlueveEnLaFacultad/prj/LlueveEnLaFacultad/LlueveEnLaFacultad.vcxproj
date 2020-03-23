@@ -158,16 +158,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\Drops.cpp" />
     <ClCompile Include="..\..\src\Main.cpp" />
     <ClCompile Include="..\..\src\PC\PlatformPC.cpp" />
     <ClCompile Include="..\..\src\PC\RendererPC.cpp" />
-    <ClCompile Include="..\..\src\Queue.cpp" />
+    <ClCompile Include="..\..\src\RenderThread.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\Drops.h" />
     <ClInclude Include="..\..\src\PC\PlatformPC.h" />
     <ClInclude Include="..\..\src\PC\RendererPC.h" />
     <ClInclude Include="..\..\src\Platform.h" />
+    <ClInclude Include="..\..\src\Queue.h" />
     <ClInclude Include="..\..\src\Renderer.h" />
+    <ClInclude Include="..\..\src\RenderThread.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

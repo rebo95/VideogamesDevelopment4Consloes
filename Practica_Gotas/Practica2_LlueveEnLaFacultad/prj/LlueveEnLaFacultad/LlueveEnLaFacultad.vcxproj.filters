@@ -36,8 +36,11 @@
     <ClCompile Include="..\..\src\PC\PlatformPC.cpp">
       <Filter>Archivos de origen\PC</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Queue.cpp">
-      <Filter>Archivos de encabezado</Filter>
+    <ClCompile Include="..\..\src\RenderThread.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Drops.cpp">
+      <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +55,15 @@
     </ClInclude>
     <ClInclude Include="..\..\src\PC\PlatformPC.h">
       <Filter>Archivos de encabezado\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\RenderThread.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Queue.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Drops.h">
+      <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
