@@ -1,12 +1,12 @@
 
-#include <SDL.h>
-#include "Platform.h"
-#include "Renderer.h"
-#include "Drops.h"
-#include "RenderThread.h"
+
+#include "Platform/Platform.h"
+#include "Renderer/Renderer.h"
+#include "Logic/Drops.h"
+#include "Renderer/RenderThread.h"
 
 
-int main(int arg, char** argv) {
+int main() {
 
 
 	Platform::init();
@@ -28,21 +28,12 @@ int main(int arg, char** argv) {
 		drops.update(frames);
 		while (RenderThread::getNumFramesPending() > numFrameBuffers);
 		frames++;
-		//for (int i = 0; i < dim; i++) {
-
-		//		uint32_t c = picture_[i];
-
-		//		int a = i % Renderer::getWidth();
-		//		int b = i / Renderer::getWidth();
-
-		//		Renderer::putPixel(a, b, c);
-		//	}
-
-		//Renderer::present();
 	}
 
+
+	RenderThread::release();
 	Renderer::release();
 	Platform::release();
-	RenderThread::release();
+
 	return 0;
 }

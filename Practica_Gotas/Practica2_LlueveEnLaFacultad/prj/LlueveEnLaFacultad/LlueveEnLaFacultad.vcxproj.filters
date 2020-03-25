@@ -1,69 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Archivos de origen">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Logic">
+      <UniqueIdentifier>{ea7b4eb1-1700-4f34-aaab-2c969b2a0599}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de encabezado">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{95fdaf83-90db-4da1-9677-925a29599a0f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de recursos">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{fe27941e-764e-422b-81e6-e4755c9e3f8f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de encabezado\PC">
-      <UniqueIdentifier>{81936ce1-d2fe-4d80-991b-509fd35acaaa}</UniqueIdentifier>
+    <Filter Include="Platform\PC">
+      <UniqueIdentifier>{4d49e887-1c2c-42a5-b6b2-fba1a39d5b3f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de origen\PS4">
-      <UniqueIdentifier>{e8d486c1-daa0-4131-b820-114e3fb9bad6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\PS4">
-      <UniqueIdentifier>{6190db54-6810-459b-9b30-58821a87bc50}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de origen\PC">
-      <UniqueIdentifier>{b62ba136-428c-48e7-be33-7ce023cd2595}</UniqueIdentifier>
+    <Filter Include="Renderer\PC">
+      <UniqueIdentifier>{21067dd2-6d6c-4993-859b-b15b2b7d7ae7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\Main.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="..\..\src\Main.cpp" />
+    <ClCompile Include="..\..\src\Logic\Drops.cpp">
+      <Filter>Logic</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\PC\RendererPC.cpp">
-      <Filter>Archivos de origen\PC</Filter>
+    <ClCompile Include="..\..\src\Platform\PC\PlatformPC.cpp">
+      <Filter>Platform\PC</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\PC\PlatformPC.cpp">
-      <Filter>Archivos de origen\PC</Filter>
+    <ClCompile Include="..\..\src\Renderer\RenderThread.cpp">
+      <Filter>Renderer</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\RenderThread.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="..\..\src\Renderer\PC\RendererPC.cpp">
+      <Filter>Renderer\PC</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Drops.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
+    <ClCompile Include="..\..\src\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\Renderer.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="..\..\src\Logic\Drops.h">
+      <Filter>Logic</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Platform.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="..\..\src\Platform\Platform.h">
+      <Filter>Platform</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\PC\RendererPC.h">
-      <Filter>Archivos de encabezado\PC</Filter>
+    <ClInclude Include="..\..\src\Platform\PC\PlatformPC.h">
+      <Filter>Platform\PC</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\PC\PlatformPC.h">
-      <Filter>Archivos de encabezado\PC</Filter>
+    <ClInclude Include="..\..\src\Renderer\Queue.h">
+      <Filter>Renderer</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\RenderThread.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="..\..\src\Renderer\Renderer.h">
+      <Filter>Renderer</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Queue.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="..\..\src\Renderer\RenderThread.h">
+      <Filter>Renderer</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Drops.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="..\..\src\Renderer\PC\RendererPC.h">
+      <Filter>Renderer\PC</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\Utils.h" />
   </ItemGroup>
 </Project>

@@ -1,2 +1,11 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
-  LlueveEnLaFacultad.vcxproj -> C:\Users\Aaron\Desktop\Consolas\HomeMade\VideogamesDevelopment4Consloes\Practica_Gotas\Practica2_LlueveEnLaFacultad\bin\x64\Debug\LlueveEnLaFacultad_x86_d.exe
+  Drops.cpp
+  Main.cpp
+  PlatformPC.cpp
+  RendererPC.cpp
+  RenderThread.cpp
+  Utils.cpp
+  Generando código...
+  LlueveEnLaFacultad.vcxproj -> C:\Users\Aaron\Desktop\Consolas\HomeMade\VideogamesDevelopment4Consloes\Practica_Gotas\Practica2_LlueveEnLaFacultad\bin\x64\Debug\LlueveEnLaFacultad_x64_d.exe
+  C:\Users\Aaron\Desktop\Consolas\HomeMade\VideogamesDevelopment4Consloes\Practica_Gotas\Practica2_LlueveEnLaFacultad\lib\SDL2-2.0.8\VisualC\x64\Debug\SDL2.dll
+  1 archivo(s) copiado(s)

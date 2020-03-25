@@ -1,4 +1,12 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
   Drops.cpp
-c:\users\aaron\desktop\consolas\homemade\videogamesdevelopment4consloes\practica_gotas\practica2_llueveenlafacultad\src\drops.cpp(67): warning C4018: '<': no coinciden signed/unsigned
+c:\users\aaron\desktop\consolas\homemade\videogamesdevelopment4consloes\practica_gotas\practica2_llueveenlafacultad\src\logic\drops.cpp(69): warning C4018: '<': no coinciden signed/unsigned
+  Main.cpp
+  PlatformPC.cpp
+  RendererPC.cpp
+  RenderThread.cpp
+  Utils.cpp
+  Generando código...
   LlueveEnLaFacultad.vcxproj -> C:\Users\Aaron\Desktop\Consolas\HomeMade\VideogamesDevelopment4Consloes\Practica_Gotas\Practica2_LlueveEnLaFacultad\bin\Win32\Debug\LlueveEnLaFacultad_x86_d.exe
+  C:\Users\Aaron\Desktop\Consolas\HomeMade\VideogamesDevelopment4Consloes\Practica_Gotas\Practica2_LlueveEnLaFacultad\lib\SDL2-2.0.8\VisualC\Win32\Debug\SDL2.dll
+  1 archivo(s) copiado(s)
