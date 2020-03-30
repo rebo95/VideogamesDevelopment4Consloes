@@ -154,21 +154,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\src\Fire.cpp" />
+    <ClCompile Include="..\..\..\src\Logic\Fire.cpp" />
+    <ClCompile Include="..\..\..\src\Logic\Sphere.cpp" />
+    <ClCompile Include="..\..\..\src\Logic\WhiteBars.cpp" />
     <ClCompile Include="..\..\..\src\main.cpp" />
-    <ClCompile Include="..\..\..\src\PC\PlatformPC.cpp" />
-    <ClCompile Include="..\..\..\src\PC\RendererPC.cpp" />
-    <ClCompile Include="..\..\..\src\Sphere.cpp" />
-    <ClCompile Include="..\..\..\src\WhiteBars.cpp" />
+    <ClCompile Include="..\..\..\src\Platform\PC\PlatformPC.cpp" />
+    <ClCompile Include="..\..\..\src\Renderer\PC\RendererPC.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\src\Fire.h" />
-    <ClInclude Include="..\..\..\src\PC\PlatformPC.h" />
-    <ClInclude Include="..\..\..\src\PC\RendererPC.h" />
-    <ClInclude Include="..\..\..\src\Platform.h" />
-    <ClInclude Include="..\..\..\src\Renderer.h" />
-    <ClInclude Include="..\..\..\src\Sphere.h" />
-    <ClInclude Include="..\..\..\src\WhiteBars.h" />
+    <ClInclude Include="..\..\..\src\Logic\Fire.h" />
+    <ClInclude Include="..\..\..\src\Logic\Sphere.h" />
+    <ClInclude Include="..\..\..\src\Logic\WhiteBars.h" />
+    <ClInclude Include="..\..\..\src\Platform\PC\PlatformPC.h" />
+    <ClInclude Include="..\..\..\src\Platform\Platform.h" />
+    <ClInclude Include="..\..\..\src\Renderer\PC\RendererPC.h" />
+    <ClInclude Include="..\..\..\src\Renderer\Renderer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

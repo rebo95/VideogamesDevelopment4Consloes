@@ -1,7 +1,10 @@
 
-#include "Fire.h"
-#include "Sphere.h"
-#include "WhiteBars.h"
+#include "Logic/Fire.h"
+#include "Logic/Sphere.h"
+#include "Logic/WhiteBars.h"
+
+#include "Renderer/Renderer.h"
+#include "Platform/Platform.h"
 
 
 int main(int argc, char** argv) {
