@@ -1,4 +1,9 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: El directorio Intermediate no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Intermediate.
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
-  Fire.cpp
+  Sphere.cpp
+c:\users\aaron\desktop\consolas\homemade\videogamesdevelopment4consloes\practica_fuego\src\logic\sphere.cpp(48): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\aaron\desktop\consolas\homemade\videogamesdevelopment4consloes\practica_fuego\src\logic\sphere.cpp(76): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\aaron\desktop\consolas\homemade\videogamesdevelopment4consloes\practica_fuego\src\logic\sphere.cpp(81): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+  main.cpp
+  Generando código...
   PrjPracticaFuego.vcxproj -> C:\Users\Aaron\Desktop\Consolas\HomeMade\VideogamesDevelopment4Consloes\Practica_Fuego\bin\x64\Debug\PrjPracticaFuego.exe

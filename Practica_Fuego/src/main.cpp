@@ -45,9 +45,9 @@ int main(int argc, char** argv) {
 		else
 			whiteBars.render(num_frame_buffers);
 
-
+		//Renderer::clear(0x00000000);
 		//sphere.sphereMovement();
-		//sphere.renderCircle();
+		//sphere.rendeCircleFixed();
 
 		frames++;
 		Renderer::present();

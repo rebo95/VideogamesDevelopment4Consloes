@@ -2,8 +2,6 @@
 #ifndef __SPHERE_H__
 #define __SPHERE_H__
 
-
-
 #include "../Renderer/PC/RendererPC.h"
 #include <math.h>
 #define PI 3.14159265
@@ -38,6 +36,8 @@ public:
 
 	void sphereMovement();
 	void buildSphere();
+	void rendeCircleFixed();
+	float DistanceToCenter(int x, int y);
 };
 
 #endif // !__SPHERE_H__
