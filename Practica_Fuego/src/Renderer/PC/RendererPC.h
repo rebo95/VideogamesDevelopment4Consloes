@@ -40,13 +40,6 @@ public :
 	//Devuelve el número de FrameBuffers utilizados por SDL
 	static int getNumBuffers();
 
-
-	//Descompone un color de 32 bytes en componentes ARGB de 8 bytes
-	static uint8_t* serializeColor(uint32_t color);
-
-	//Compone un color de 32 bytes a partir de valores de ARGB de 8 bytes
-	static uint32_t deserializeColor(uint8_t r, uint8_t g, uint8_t b);
-
 	static SDL_Window* getWindow() { return window_; };	//Devuelve el manejador de la ventana de SDL
 };
 

@@ -1,16 +1,20 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: El directorio Intermediate no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Intermediate.
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
   Fire.cpp
-  PlatformPC.cpp
-  RendererPC.cpp
   Sphere.cpp
-c:\users\aaron\desktop\consolas\homemade\videogamesdevelopment4consloes\practica_fuego\src\sphere.cpp(59): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\aaron\desktop\consolas\homemade\videogamesdevelopment4consloes\practica_fuego\src\sphere.cpp(64): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\aaron\desktop\consolas\homemade\videogamesdevelopment4consloes\practica_fuego\src\logic\sphere.cpp(48): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\aaron\desktop\consolas\homemade\videogamesdevelopment4consloes\practica_fuego\src\logic\sphere.cpp(76): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\aaron\desktop\consolas\homemade\videogamesdevelopment4consloes\practica_fuego\src\logic\sphere.cpp(81): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
   WhiteBars.cpp
   main.cpp
+  PlatformPC.cpp
+  RendererPC.cpp
+  Utils.cpp
   Generando código
-  2 of 33 functions ( 6.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
+  33 of 33 functions (100.0%) were compiled.
+    4 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Generación de código finalizada
   PrjPracticaFuego.vcxproj -> C:\Users\Aaron\Desktop\Consolas\HomeMade\VideogamesDevelopment4Consloes\Practica_Fuego\bin\x64\Release\PrjPracticaFuego.exe
+  C:\Users\Aaron\Desktop\Consolas\HomeMade\VideogamesDevelopment4Consloes\Practica_Fuego\lib\SDL2-2.0.8\VisualC\x64\Release\SDL2.dll
+  1 archivo(s) copiado(s)

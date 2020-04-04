@@ -2,13 +2,14 @@
 #ifndef __FIRE_H__
 #define __FIRE_H__
 
+#include "../Utils.h"
 #include "../Renderer/PC/RendererPC.h"
 #include <random>
 
 typedef unsigned __int32 uint32_t;
 
 //Definimos la macro RGB para la paleta dada por el cliente
-#define RGB(a, b, c) Renderer::deserializeColor(a, b, c)
+#define RGB(a, b, c) PackColor(a, b, c, 0xFF)
 //Este macro está cogiendo los elementos del array que nos han dado y los está convirtiendo automáticamente
 //al formato deserializado de 32 bits
 
